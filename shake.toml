@@ -1,11 +1,15 @@
-[sync_reader]
+[scan_reader]
 cluster = false
 address = "${SHAKE_SRC_ADDRESS}"
 username = "${SHAKE_SRC_USERNAME}"
 password = "${SHAKE_SRC_PASSWORD}"
 tls = false
-sync_rdb = true
-sync_aof = true
+
+# optional selectors / tuning
+dbs = []
+scan = true
+ksn = false
+count = 10
 
 [redis_writer]
 cluster = false
